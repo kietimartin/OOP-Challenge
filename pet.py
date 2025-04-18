@@ -12,7 +12,7 @@ class Pet:
             self.happiness = min(10, self.happiness + 1)  # Cap happiness at 10
         else:
             self.happiness = min(10, self.happiness + 1)
-        return f'{self.name} is eating...'
+        return f'{self.name} is eating🍚...'
 
     def sleep(self):
         if self.energy < 10:
@@ -23,7 +23,7 @@ class Pet:
         self.energy = max(0, self.energy - 2)  # Ensure energy doesn't go below 0
         self.happiness = min(10, self.happiness + 2)  # Cap happiness at 10
         self.hunger = min(10, self.hunger + 1)  # Cap hunger at 10
-        return f'{self.name} is playing...'
+        return f'{self.name} is playing🐕...'
 
     def train(self, trick):
         if trick not in self.tricks:  # Avoid duplicate tricks
@@ -33,7 +33,7 @@ class Pet:
         return self.tricks
 
     def get_status(self):
-        return f"{self.name}'s current status:\n" \
+        return f"{self.name}'s current status🐕:\n" \
                 f"Hunger: {self.hunger}\n" \
                 f"Energy: {self.energy}\n" \
                 f"Happiness: {self.happiness}\n" \
